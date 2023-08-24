@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/common/Navigation.jsx", "src/pages/ask-the-llm.jsx", "src/pages/tla-plus-editor.jsx", "src/pages/templates.jsx", "src/pages/state-diagram.hsx", "src/pages/sequence-diagram.jsx", "src/pages/model-results.jsx", "src/pages/index.jsx", "src/pages/design-intent.jsx", "src/components/TlaPlusEditor.jsx", "src/components/Template.jsx", "src/components/SequenceDiagram.jsx", "src/components/PageLayout.jsx", "src/components/ModelResults.jsx", "src/components/Message.jsx", "src/components/Mermaid.jsx", "src/components/Home.jsx", "src/components/DesignIntent.jsx", "src/components/ChatWindow.jsx"],
+  "exclude": ["node_modules"]
+}

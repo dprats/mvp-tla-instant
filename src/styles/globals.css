@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Diagram {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Chat styling */
+.chat-window {
+  max-width: 360px;
+  margin: 50px auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sent {
+  align-self: flex-end;
+  background-color: #0084ff;
+  color: white;
+}
+
+.received {
+  align-self: flex-start;
+  background-color: #e5e5e5;
+}
+
+
+/* Chat styling 2 */
+/* App.css */
+
+.App {
+  text-align: center;
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message.user {
+  background-color: #dddddd;
+  align-self: flex-start;
+}
+
+.message.bot {
+  background-color: #abcdef;
+  align-self: flex-end;
+}
+
+.tla-content {
+  color: blue;
+  /* Add more styles as needed */
+}
