@@ -94,8 +94,18 @@ export default function Hero() {
                 {/* <p>Easy TLA+ to solve hard-to-reason design bugs</p> */}
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Inspired by typical engineer's workflow, this tool allows you write TLA+ and watch the impact of your changes in near realtime.
+                [Warning: this is a proof of concept] Inspired by typical engineer's workflow, this tool allows you write TLA+ and watch the impact of your changes in near realtime. 
+               
               </p>
+
+              <a href="https://github.com/yourusername/yourrepository" target="_blank" rel="noopener noreferrer" style={{ color: 'blue', textDecoration: 'underline' }}>
+                    View code on GitHub
+              </a>
+
+              {/* Link to the github code */}
+              
+              
+
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="/tla-plus-editor"
