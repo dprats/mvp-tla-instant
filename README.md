@@ -18,14 +18,12 @@ Warning:
 
 ## Getting Started
 
-First, run the development server:
+First, install the packaged and run the development server:
 
 ```bash
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -37,3 +35,7 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Environment variables
+
+The following environment variables are required to run the app: `OPENAI_API_KEY` which you should add in an `.env` file if you deploy.
