@@ -1,12 +1,10 @@
 import OpenAI from 'openai';
 
+//THIS IS THE BACKEND OF THE APP
+
 const openAI = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY // This is also the default, can be omitted
 });
-
-// export const config = {
-//   runtime: "edge",
-// };
 
 //We will save the message history in memory for now
 const messageHistory = [ ];
@@ -21,23 +19,12 @@ export default async function (req, res) {
   //   return;
   // }
 
-  // e.g. req.body = { role: 'user', content: userInput };
   const userMessage = req.body;
 
-  //modify the user's request so it has the <tla></tla> attribute we want
-  // const modifiedUserInputForPrompt = `${userMessage.content}. 
-  // If the solution includes any TLA+ code, wrap the entire TLA+ spec module you generate in <tla></tla> tags. 
-  // Leave everything as is. If the solution does need for TLA+, do not add any TLA+.
-  // `;
   const modifiedUserInputForPrompt = `${userMessage.content}`;
 
   //add the latest user message to the message history
   messageHistory.push({"role": "user", "content": modifiedUserInputForPrompt});
-
-  // console.log("*****user Message****");
-  // console.log({"role": "user", "content": modifiedUserInputForPrompt});
-  // console.log("************");
-
 
   try {
 
@@ -47,14 +34,6 @@ export default async function (req, res) {
       messages: messageHistory,
       temperature: 0.8,
     });
-    // console.log("*****chatCompletion****");
-    // console.log(chatCompletion);
-    // console.log("************");
-
-    // const openAIResponseMessage = chatCompletion.choices[0].message;
-    // console.log("*****openAIResponse****");
-    // console.log(openAIResponseMessage);
-    // console.log("************");
 
     //add the AI message to the message history
     messageHistory.push({"role": "assistant", "content": chatCompletion.choices[0].message.content});

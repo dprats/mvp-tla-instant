@@ -1,9 +1,9 @@
-import PageLayout from "./PageLayout";
+// import PageLayout from "./PageLayout";
 
-export default function Home() {
-  return (
-    <>
-      <PageLayout header="Dashboard">hi</PageLayout>
-    </>
-  );
-}
+// export default function Home() {
+//   return (
+//     <>
+//       <PageLayout header="Dashboard">hi</PageLayout>
+//     </>
+//   );
+// }
